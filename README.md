@@ -69,3 +69,29 @@ The system follows a time-series data workflow:
 ---
 
 ## Project Structure
+
+
+---
+
+## Key Learnings
+- Time-series analysis  
+- Forecasting concepts  
+- Energy data analytics  
+- Data visualisation  
+
+---
+
+## Future Improvements
+- Advanced predictive models  
+- Real-time data integration  
+- Regional demand analysis  
+
+---
+
+## Author
+Anne Subashini Sritharan  
+
+---
+
+## Project Note
+This project demonstrates how analytics can support energy demand forecasting and planning.
