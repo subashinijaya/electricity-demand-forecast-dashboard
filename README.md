@@ -1,44 +1,71 @@
 # electricity-demand-forecast-dashboard
 Power BI dashboard analysing electricity consumption trends and forecasting future demand using historical energy data.
 
-Overview
-This project presents an interactive Power BI dashboard developed to analyse electricity consumption patterns and forecast future demand. The dashboard provides insights into energy usage trends, peak demand periods, and seasonal variations.
+# Electricity Demand Forecast Dashboard
 
-Objectives
-Analyse historical electricity consumption trends
-Identify peak demand periods
-Perform demand forecasting based on historical data
-Support energy planning and decision-making
+## Project Overview
+This project presents an electricity demand analysis and forecasting dashboard developed using Power BI. The aim is to analyse historical electricity consumption patterns and forecast future demand for efficient energy planning.
 
-Tools & Technologies
-Microsoft Power BI
-Microsoft Excel
-SQL (concepts for data handling)
+This project is inspired by real-world electricity demand forecasting practices.
 
-Dataset
-Source: Kaggle – Global Energy Consumption Dataset
-Includes time-series data of electricity usage across multiple years
+---
 
-Key Features
-Time-series analysis of electricity consumption
-Forecasting of future demand trends
-Peak demand identification
-Monthly and yearly usage comparison
-Interactive filters for detailed analysis
+## Objectives
+- Analyse electricity consumption trends over time  
+- Identify peak demand periods  
+- Perform demand forecasting  
+- Support energy planning and resource allocation  
 
-Dashboard Preview
+---
 
+## System Architecture
+The system follows a time-series data workflow:
 
-Key Insights
-Identified peak electricity usage periods
-Analysed seasonal variations in energy consumption
-Forecasted future demand trends
-Supported planning for energy resource allocation
+- **Data Collection Layer** – energy consumption dataset  
+- **Data Processing Layer** – cleaning and transformation  
+- **Analysis Layer** – trend and forecasting analysis  
+- **Visualisation Layer** – Power BI dashboards  
 
-Files Included
-Power BI Dashboard (.pbix)
-Dataset file (.csv / .xlsx)
-Dashboard screenshots
-💡 Conclusion
+---
 
-This project demonstrates how data analytics can be used to analyse and forecast electricity demand, enabling better planning and efficient energy management.
+## Key Features
+- Time-series electricity demand analysis  
+- Peak usage identification  
+- Monthly and yearly trend comparison  
+- Demand forecasting visuals  
+- Interactive filtering  
+
+---
+
+## Technologies Used
+- **Microsoft Power BI**  
+- **Microsoft Excel**  
+- **SQL (Concepts)**  
+
+---
+
+## Data Pipeline Workflow
+1. Data Collection  
+2. Data Cleaning  
+3. Time-series Analysis  
+4. Forecasting and Trend Modelling  
+5. Dashboard Visualisation  
+
+---
+
+## Use Cases
+- Electricity demand forecasting  
+- Energy consumption monitoring  
+- Smart grid analysis  
+- Utility company reporting  
+
+---
+
+## Ethical Considerations
+- Data accuracy in forecasting  
+- Responsible use of energy data  
+- Transparency in reporting  
+
+---
+
+## Project Structure
