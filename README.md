@@ -1,72 +1,77 @@
-# Construction Project Performance Dashboard
+# Electricity Demand Forecast Dashboard
 
-Power BI dashboard analysing cost, duration, and risk across 1,300 construction tasks, helping identify which tasks drive the most cost and risk exposure.
+Power BI dashboard analysing global electricity consumption trends (2000–2024) across 10 major economies, with statistical demand forecasting for energy planning.
 
 ## Project Overview
 
-This project analyses a task-level construction dataset covering duration, labor, equipment, material cost, and risk classification. The goal is to help project teams quickly identify high-cost, high-risk, and resource-heavy tasks that need closer management attention.
+This project analyses historical electricity consumption data for 10 countries (Australia, Brazil, Canada, China, Germany, India, Japan, Russia, UK, USA) over a 25-year period, and forecasts future demand using Power BI's built-in exponential smoothing forecast model. The goal is to turn raw yearly consumption data into insights that support energy planning and cross-country comparison.
 
 ## Objectives
 
-- Track total project cost and task volume at a glance
-- Compare cost and duration across risk levels (Low / Medium / High)
-- Identify which tasks are the biggest cost and risk drivers
-- Support resourcing decisions using labor and equipment data
+- Analyse electricity consumption trends across countries, 2000–2024
+- Identify the highest and lowest consuming countries year over year
+- Forecast electricity demand 5 years ahead using statistical forecasting
+- Compare renewable energy adoption against fossil fuel dependency and carbon emissions
 
 ## System Architecture
 
-- **Data Collection Layer** — task-level construction dataset (1,300 tasks)
-- **Data Processing Layer** — Power Query type validation
-- **Analysis Layer** — DAX measures for totals, averages, and risk segmentation
-- **Visualisation Layer** — Power BI dashboard (2 pages)
+- **Data Collection Layer** — global energy consumption dataset (country-year level)
+- **Data Processing Layer** — Power Query cleaning, deduplication, and aggregation to a consistent yearly time series
+- **Analysis Layer** — DAX measures for YoY growth, averages, and totals
+- **Visualisation Layer** — Power BI dashboard (3 pages)
 
 ## Key Features
 
-- KPI cards: total tasks, total material cost, average duration, average labor, high-risk task %
-- Cost breakdown by risk level (bar chart)
-- Duration vs cost scatter plot, sized by labor requirement, coloured by risk
-- Sortable task-level cost and risk table
-- Interactive slicers for risk level and dependency count
+- Multi-country yearly consumption trend line chart
+- Statistical demand forecast (5-year projection, 95% confidence interval) using Power BI's Analytics forecasting engine
+- Country comparison: consumption ranking, renewable share vs fossil dependency scatter plot
+- Interactive slicers for Country and Year
+- KPI cards for total consumption, renewable share, carbon emissions, and energy price
 
 ## Technologies Used
 
-- Microsoft Power BI (Power Query, DAX)
-- Python (pandas) for initial data validation
+- Microsoft Power BI (Power Query, DAX, forecasting analytics)
+- Microsoft Excel / CSV data preparation
+- Python (pandas) for initial data cleaning and aggregation
 
 ## Data Pipeline Workflow
 
-1. Data import (task-level construction dataset)
-2. Data type validation in Power Query
-3. DAX measure creation (totals, averages, risk segmentation)
-4. Dashboard visualisation across 2 pages
+1. Data collection (public global energy consumption dataset)
+2. Data cleaning and deduplication (Power Query)
+3. Aggregation to one row per country per year
+4. DAX measure creation for trend and comparison metrics
+5. Forecast modelling (Power BI Analytics pane, exponential smoothing)
+6. Dashboard visualisation and formatting
 
 ## Use Cases
 
-- Construction project cost monitoring
-- Risk-based task prioritisation
-- Resource (labor/equipment) planning
-- Project management reporting
+- Electricity demand forecasting for planning purposes
+- Cross-country energy consumption benchmarking
+- Renewable energy adoption tracking
+- Utility and policy reporting
 
 ## Data Limitations
 
-This dataset is task-level and does not include actual project dates, a start/end timeline, or an on-time-vs-delayed flag. It supports cost, duration, and risk analysis, but not calendar-based progress tracking. A future version could add scheduling data for true delay analysis.
+This dataset is yearly and country-level, not monthly or region-level. It does not include smart grid or sensor-level data. The forecast is a statistical projection based on historical trend patterns available in the data — it is a demonstration of forecasting methodology, not an official energy planning forecast.
 
 ## Screenshots
 
 ![Overview Page](screenshots/overview.png)
-![Cost and Risk Analysis Page](screenshots/cost_risk_analysis.png)
+![Demand Forecast Page](screenshots/forecast.png)
+![Country Comparison Page](screenshots/comparison.png)
 
 ## Key Learnings
 
-- DAX measure design for segmented KPI reporting (COUNTROWS, CALCULATE with filter conditions)
-- Scatter plot analysis for multi-variable comparison (cost, duration, labor, risk)
-- Dashboard structuring for stakeholder-ready reporting
+- Time-series data cleaning and deduplication
+- Power BI statistical forecasting (exponential smoothing, confidence intervals)
+- DAX measure design (YoY growth, aggregations)
+- Dashboard storytelling across multiple pages
 
 ## Future Improvements
 
-- Add real project timeline/date data for true delay and schedule-variance analysis
-- Add budget-vs-actual comparison if budget data becomes available
-- Add site/location breakdowns
+- Rebuild with monthly/hourly grid-level data (e.g. EIA or ENTSO-E) for finer-grained forecasting
+- Add regional (state/province) breakdowns
+- Incorporate weather data as a demand driver
 
 ## Author
 
@@ -74,5 +79,4 @@ Anne Subashini Sritharan
 
 ## Project Note
 
-This project demonstrates how Power BI can turn task-level construction data into a clear view of cost drivers and risk exposure to support project management decisions.
-
+This project demonstrates how Power BI can be used to turn multi-year global energy data into forecasting and comparison insights that support energy planning decisions.
