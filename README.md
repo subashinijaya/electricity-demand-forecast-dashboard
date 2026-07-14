@@ -56,9 +56,9 @@ This dataset is yearly and country-level, not monthly or region-level. It does n
 
 ## Screenshots
 
-![Overview Page](screenshots/overview.png)
-![Demand Forecast Page](screenshots/forecast.png)
-![Country Comparison Page](screenshots/comparison.png)
+![Overview Page](screenshot_overview.png)
+![Cost and Risk Analysis Page](screenshot_forecast.png)
+![comparison Page](screenshot_comparison.png)
 
 ## Key Learnings
 
